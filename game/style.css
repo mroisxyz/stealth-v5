@@ -1,0 +1,29 @@
+/* style.css — the canvas is the whole page; no web fonts, no remote assets. */
+:root { color-scheme: dark; }
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #04080a;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+#game {
+  position: fixed;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: crosshair;
+}
+/* Announced to screen readers, never painted over the game. */
+#status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
